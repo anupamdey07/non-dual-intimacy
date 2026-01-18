@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @theme {
-  --color-cream: #E8E3DB;
-  --color-warm-beige: #F5F1EC;
-  --color-dark-beige: #D4CFC7;
-  --color-soft-purple: #C5B8D4;
+  --color-cream: #E2E8DD;
+  --color-warm-beige: #F0F4ED;
+  --color-dark-beige: #C5CDC0;
+  --color-soft-purple: #B8C2D4;
+  --color-sage: #9AB29A;
+  --color-dark-sage: #7A8F7A;
 
   --font-family-sans: 'Inter', system-ui, sans-serif;
 

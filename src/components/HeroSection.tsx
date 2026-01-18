@@ -4,11 +4,6 @@ const HeroSection: React.FC = () => {
     return (
         <section className="min-h-screen pt-24 pb-16 px-6 flex flex-col justify-center items-center">
             <div className="max-w-5xl mx-auto text-center">
-                {/* Small heading */}
-                <p className="text-sm text-blue-600 mb-8 tracking-wide uppercase">
-                    01 heading hero
-                </p>
-
                 {/* Main Heading */}
                 <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-12 leading-tight animate-fade-in text-balance">
                     Intimacy,

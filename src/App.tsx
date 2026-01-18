@@ -5,6 +5,7 @@ import LogoMarquee from './components/LogoMarquee';
 import FeatureCards from './components/FeatureCards';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import PhotographyShowcase from './components/PhotographyShowcase';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <main>
         <section id="hero"><HeroSection /></section>
+        <PhotographyShowcase />
         <section id="about"><ImageContentSection /></section>
         <section id="logos"><LogoMarquee /></section>
         <section id="features"><FeatureCards /></section>

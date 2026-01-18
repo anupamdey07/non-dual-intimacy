@@ -29,10 +29,10 @@ const Header: React.FC = () => {
                             </svg>
                         </button>
                         {isExploreOpen && (
-                            <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl py-2 border border-gray-100 animate-fade-in">
-                                <a href="#poetry" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cream/50">Poetry</a>
-                                <a href="#stories" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cream/50">Stories</a>
-                                <a href="#visuals" className="block px-4 py-2 text-sm text-gray-700 hover:bg-cream/50">Visuals</a>
+                            <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-xl py-2 border border-gray-100 animate-fade-in text-gray-700">
+                                <a href="#fragile-silence" onClick={() => setIsExploreOpen(false)} className="block px-4 py-2 text-sm hover:bg-cream/50">Fragile Silence</a>
+                                <a href="#gentle-presence" onClick={() => setIsExploreOpen(false)} className="block px-4 py-2 text-sm hover:bg-cream/50">Gentle Presence</a>
+                                <a href="#earth-textures" onClick={() => setIsExploreOpen(false)} className="block px-4 py-2 text-sm hover:bg-cream/50">Earth Textures</a>
                             </div>
                         )}
                     </div>
@@ -85,10 +85,11 @@ const Header: React.FC = () => {
                     <div className="flex flex-col gap-6">
                         <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-gray-800">About</a>
                         <a href="#blog" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-gray-800">Blog</a>
-                        <div className="space-y-4">
+                        <div className="space-y-4 text-gray-700">
                             <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold">Explore</p>
-                            <a href="#poetry" onClick={() => setIsMobileMenuOpen(false)} className="block text-gray-700">Poetry</a>
-                            <a href="#stories" onClick={() => setIsMobileMenuOpen(false)} className="block text-gray-700">Stories</a>
+                            <a href="#fragile-silence" onClick={() => setIsMobileMenuOpen(false)} className="block">Fragile Silence</a>
+                            <a href="#gentle-presence" onClick={() => setIsMobileMenuOpen(false)} className="block">Gentle Presence</a>
+                            <a href="#earth-textures" onClick={() => setIsMobileMenuOpen(false)} className="block">Earth Textures</a>
                         </div>
                         <div className="space-y-4">
                             <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold">Support</p>
