@@ -1,73 +1,92 @@
-# React + TypeScript + Vite
+# Nondual Intimacy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful, minimalist website built with React, TypeScript, and Tailwind CSS v4.
 
-Currently, two official plugins are available:
+## 🎨 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern Tech Stack**: React 18, TypeScript, Vite 7, Tailwind CSS v4
+- **Responsive Design**: Mobile-first approach with smooth animations
+- **Premium Aesthetics**: Warm beige/cream color palette with elegant typography
+- **Component-Based**: Modular architecture with reusable components
 
-## React Compiler
+## 🚀 Quick Start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js v25.3.0 or higher
+- npm 11.7.0 or higher
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/non-dual-intimacy.git
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Navigate to project directory
+cd non-dual-intimacy
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The website will be available at `http://localhost:5173/`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📦 Build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Create production build
+npm run build
+
+# Preview production build
+npm run preview
 ```
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/
+│   ├── Header.tsx              # Navigation header
+│   ├── HeroSection.tsx         # Hero section with main heading
+│   ├── ImageContentSection.tsx # Content with images
+│   ├── LogoMarquee.tsx         # Partner logos
+│   ├── FeatureCards.tsx        # Feature showcase cards
+│   ├── ContactSection.tsx      # Contact information
+│   └── Footer.tsx              # Footer with links
+├── App.tsx                     # Main application
+└── index.css                   # Global styles with Tailwind
+```
+
+## 🎨 Design System
+
+### Colors
+- **Cream**: `#E8E3DB` - Primary background
+- **Warm Beige**: `#F5F1EC` - Secondary background
+- **Dark Beige**: `#D4CFC7` - Accents
+- **Soft Purple**: `#C5B8D4` - Highlights
+
+### Typography
+- **Font**: Inter (Google Fonts)
+- **Weights**: 300, 400, 500, 600, 700
+
+## 🛠️ Technologies
+
+- [React](https://react.dev/) - UI library
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Vite](https://vite.dev/) - Build tool
+- [Tailwind CSS](https://tailwindcss.com/) - Styling framework
+
+## 📄 License
+
+MIT License - feel free to use this project for your own purposes.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+---
+
+Built with ❤️ using React, TypeScript, and Tailwind CSS
