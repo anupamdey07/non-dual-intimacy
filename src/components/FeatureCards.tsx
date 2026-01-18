@@ -1,44 +1,80 @@
 import React from 'react';
 
 const FeatureCards: React.FC = () => {
+    const handleNavigation = (projectId: string) => {
+        const element = document.getElementById(projectId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    };
+
     return (
         <section className="py-20 px-6 bg-cream">
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
-                {/* Card 1 - Text Card */}
-                <div className="bg-white rounded-3xl p-12 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+                {/* Card 1 - Fragile Silence */}
+                <div
+                    onClick={() => handleNavigation('fragile-silence')}
+                    className="bg-white rounded-3xl p-12 shadow-lg hover:shadow-xl transition-all cursor-pointer hover:scale-105"
+                >
                     <p className="text-xs text-gray-500 uppercase tracking-wide mb-6">
                         An open doorway
                     </p>
                     <h3 className="text-3xl font-bold mb-6">
-                        Feel with every sense
+                        Fragile Silence
                     </h3>
                     <p className="text-gray-600 leading-relaxed mb-8">
-                        Experience how mindful presence turns each moment into a living poem.
-                        Here, connection is an invitation—soft, genuine, and always shared.
+                        The beauty of stillness in the mundane. Experience moments of quiet presence.
                     </p>
-                    <a href="#hero" className="inline-flex items-center gap-2 text-black font-medium hover:gap-4 transition-all">
-                        Begin
+                    <span className="inline-flex items-center gap-2 text-black font-medium hover:gap-4 transition-all">
+                        Explore
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
-                    </a>
+                    </span>
                 </div>
 
-                {/* Card 2 - Image Card */}
-                <div className="relative rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow aspect-square bg-gradient-to-br from-purple-200 via-purple-300 to-pink-200">
-                    <img
-                        src="/serene-landscape.jpg"
-                        alt="Wonder woven between us"
-                        className="w-full h-full object-cover"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent text-white">
-                        <p className="text-xs uppercase tracking-wide mb-2 opacity-80">
-                            A shared pause
-                        </p>
-                        <h3 className="text-2xl font-semibold">
-                            Wonder woven between us
-                        </h3>
-                    </div>
+                {/* Card 2 - Gentle Presence */}
+                <div
+                    onClick={() => handleNavigation('gentle-presence')}
+                    className="bg-white rounded-3xl p-12 shadow-lg hover:shadow-xl transition-all cursor-pointer hover:scale-105"
+                >
+                    <p className="text-xs text-gray-500 uppercase tracking-wide mb-6">
+                        A shared pause
+                    </p>
+                    <h3 className="text-3xl font-bold mb-6">
+                        Gentle Presence
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed mb-8">
+                        Capturing the unseen breath of the world. Feel with every sense.
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-black font-medium hover:gap-4 transition-all">
+                        Explore
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                    </span>
+                </div>
+
+                {/* Card 3 - Earth Textures */}
+                <div
+                    onClick={() => handleNavigation('earth-textures')}
+                    className="bg-white rounded-3xl p-12 shadow-lg hover:shadow-xl transition-all cursor-pointer hover:scale-105"
+                >
+                    <p className="text-xs text-gray-500 uppercase tracking-wide mb-6">
+                        Wonder woven
+                    </p>
+                    <h3 className="text-3xl font-bold mb-6">
+                        Earth Textures
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed mb-8">
+                        Stories written in stone and moss. Connection through touch and presence.
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-black font-medium hover:gap-4 transition-all">
+                        Explore
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                    </span>
                 </div>
             </div>
         </section>
