@@ -1,21 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Footer: React.FC = () => {
+    const [email, setEmail] = useState('');
+    const [isSubscribed, setIsSubscribed] = useState(false);
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (email) {
+            console.log('Subscribing:', email);
+            setIsSubscribed(true);
+            setEmail('');
+            // Reset success message after 5 seconds
+            setTimeout(() => setIsSubscribed(false), 5000);
+        }
+    };
+
     return (
         <footer className="bg-black text-white py-16 px-6">
             <div className="max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-5 gap-12 mb-12">
                     {/* Logo and Brand */}
                     <div className="md:col-span-1">
-                        <div className="flex items-center gap-2 mb-4">
-                            <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                        <a href="#hero" className="flex items-center gap-2 mb-4 group">
+                            <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center transition-transform group-hover:scale-110">
                                 <span className="text-black text-xl">✦</span>
                             </div>
-                            <div>
+                            <div className="transition-opacity group-hover:opacity-80">
                                 <div className="font-semibold text-sm">NONDUAL</div>
                                 <div className="font-semibold text-sm">INTIMACY</div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     {/* Explore */}
@@ -55,24 +69,33 @@ const Footer: React.FC = () => {
                     </div>
 
                     {/* Newsletter */}
-                    <div>
+                    <div id="newsletter">
                         <h4 className="font-semibold mb-4 text-sm">Subscribe</h4>
                         <p className="text-sm text-gray-400 mb-4">
                             Receive warmth, poetry, and gentle updates.
                         </p>
-                        <form className="space-y-3">
-                            <input
-                                type="email"
-                                placeholder="Email"
-                                className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-sm focus:outline-none focus:border-white/40 transition-colors"
-                            />
-                            <button
-                                type="submit"
-                                className="w-full bg-white text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors"
-                            >
-                                Subscribe
-                            </button>
-                        </form>
+                        {isSubscribed ? (
+                            <div className="bg-white/10 border border-green-500/50 rounded-lg p-4 animate-fade-in">
+                                <p className="text-sm text-green-400">Thank you for subscribing! ✨</p>
+                            </div>
+                        ) : (
+                            <form className="space-y-3" onSubmit={handleSubmit}>
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    required
+                                    className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-sm focus:outline-none focus:border-white/40 transition-colors"
+                                />
+                                <button
+                                    type="submit"
+                                    className="w-full bg-white text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors active:scale-95 transition-transform"
+                                >
+                                    Subscribe
+                                </button>
+                            </form>
+                        )}
                         <p className="text-xs text-gray-500 mt-3">
                             See our <a href="#privacy" className="underline hover:text-white">privacy policy</a>.
                         </p>
@@ -84,9 +107,9 @@ const Footer: React.FC = () => {
                     <p>All rights reserved © 2025</p>
                     <div className="flex gap-6">
                         <a href="#privacy" className="hover:text-white transition-colors">Privacy</a>
-                        <a href="#facebook" className="hover:text-white transition-colors">Facebook</a>
-                        <a href="#instagram" className="hover:text-white transition-colors">Instagram</a>
-                        <a href="#twitter" className="hover:text-white transition-colors">Twitter</a>
+                        <a href="#facebook" className="hover:text-white transition-colors font-medium hover:scale-110 transition-transform">Facebook</a>
+                        <a href="#instagram" className="hover:text-white transition-colors font-medium hover:scale-110 transition-transform">Instagram</a>
+                        <a href="#twitter" className="hover:text-white transition-colors font-medium hover:scale-110 transition-transform">Twitter</a>
                     </div>
                 </div>
             </div>

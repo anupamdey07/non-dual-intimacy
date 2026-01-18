@@ -16,12 +16,12 @@ const FeatureCards: React.FC = () => {
                         Experience how mindful presence turns each moment into a living poem.
                         Here, connection is an invitation—soft, genuine, and always shared.
                     </p>
-                    <button className="flex items-center gap-2 text-black font-medium hover:gap-4 transition-all">
+                    <a href="#hero" className="inline-flex items-center gap-2 text-black font-medium hover:gap-4 transition-all">
                         Begin
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
-                    </button>
+                    </a>
                 </div>
 
                 {/* Card 2 - Image Card */}

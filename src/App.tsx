@@ -11,11 +11,11 @@ function App() {
     <div className="min-h-screen">
       <Header />
       <main>
-        <HeroSection />
-        <ImageContentSection />
-        <LogoMarquee />
-        <FeatureCards />
-        <ContactSection />
+        <section id="hero"><HeroSection /></section>
+        <section id="about"><ImageContentSection /></section>
+        <section id="logos"><LogoMarquee /></section>
+        <section id="features"><FeatureCards /></section>
+        <section id="contact"><ContactSection /></section>
       </main>
       <Footer />
     </div>

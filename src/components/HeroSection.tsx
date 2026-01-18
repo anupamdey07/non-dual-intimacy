@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => {
                 </p>
 
                 {/* Main Heading */}
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-12 leading-tight animate-fade-in">
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-12 leading-tight animate-fade-in text-balance">
                     Intimacy,
                     <br />
                     reimagined through
@@ -20,12 +20,12 @@ const HeroSection: React.FC = () => {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-wrap gap-4 justify-center">
-                    <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-all hover:scale-105 font-medium">
+                    <a href="#features" className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-all hover:scale-105 font-medium min-w-[140px] text-center">
                         Browse
-                    </button>
-                    <button className="bg-white text-black px-8 py-3 rounded-full border-2 border-black hover:bg-gray-50 transition-all hover:scale-105 font-medium">
+                    </a>
+                    <a href="#newsletter" className="bg-white text-black px-8 py-3 rounded-full border-2 border-black hover:bg-gray-50 transition-all hover:scale-105 font-medium min-w-[140px] text-center">
                         Join
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
                     <img
                         src="/hero-image.jpg"
                         alt="Warm interior with natural light"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                     />
                 </div>
             </div>
