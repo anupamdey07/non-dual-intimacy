@@ -8,6 +8,7 @@ A beautiful, minimalist website built with React, TypeScript, and Tailwind CSS v
 - **Responsive Design**: Mobile-first approach with smooth animations
 - **Premium Aesthetics**: Warm beige/cream color palette with elegant typography
 - **Component-Based**: Modular architecture with reusable components
+- **Google Drive Integration**: Automatic image syncing from Google Drive
 
 ## 🚀 Quick Start
 
@@ -33,6 +34,17 @@ npm run dev
 ```
 
 The website will be available at `http://localhost:5173/`
+
+## 🖼️ Google Drive Image Sync
+
+Automatically sync images from Google Drive to your project.
+
+```bash
+# Sync images from Google Drive
+npm run sync-images
+```
+
+**Setup Instructions**: See [GOOGLE_DRIVE_SETUP.md](./GOOGLE_DRIVE_SETUP.md) for detailed configuration guide.
 
 ## 📦 Build
 
