@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "sync-images": "node scripts/syncGoogleDriveImages.js"
+    "sync-images": "node scripts/syncGoogleDriveImages.js",
+    "sync-folder": "node scripts/syncGoogleDriveFolderImages.js"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
