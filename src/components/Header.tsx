@@ -60,7 +60,7 @@ const Header: React.FC = () => {
                 {/* Join Button & Mobile Toggle */}
                 <div className="flex items-center gap-4">
                     <a href="#contact" className="hidden md:block bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors font-medium text-center">
-                        Join
+                        Book a shoot now!
                     </a>
 
                     {/* Mobile Menu Toggle */}
@@ -97,7 +97,7 @@ const Header: React.FC = () => {
                             <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="block text-gray-700 block">Contact Us</a>
                         </div>
                         <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="bg-black text-white px-6 py-3 rounded-full text-center font-medium">
-                            Join Now
+                            Book a shoot now!
                         </a>
                     </div>
                 </div>
